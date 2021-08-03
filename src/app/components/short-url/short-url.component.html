@@ -44,13 +44,11 @@
     </div>
     <div *ngIf="urlProcesada" class="row">
       <div class="col-lg-8 mt-4">
-        <label for="urlShort">Url Acortada:</label>
-        <input
-          type="text"
-          [(ngModel)]="urlShort"
-          class="form-control form-control-lg"
-          placeholder="Url Procesada..."
-        />
+        <div class="form-group has-success">
+          <label class="form-label mt-4" for="inputValid">Tu nueva URL:</label>
+          <input type="text" [(ngModel)]="urlShort" value="correct value" class="form-control is-valid" id="inputValid" placeholder="Url Procesada...">
+          <div class="valid-feedback">Disfrútala!</div>
+        </div>
       </div>
     </div>
   </div>
