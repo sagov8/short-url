@@ -35,8 +35,10 @@
     </div>
     <div *ngIf="urlProcesada" class="row">
         <div class="col-lg-8 mt-4">
+            <label for="urlShort">Url Acortada:</label>
             <input type="text" [(ngModel)]="urlShort" class="form-control form-control-lg" placeholder="Url Procesada...">
         </div>
     </div>
   </div>
+  <app-spinner *ngIf="loading"></app-spinner>
 </div>
