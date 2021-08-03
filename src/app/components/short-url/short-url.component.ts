@@ -42,7 +42,7 @@ export class ShortUrlComponent implements OnInit {
 
     setTimeout(() => {
       this.obtenerUrlShort();
-    }, 2000);
+    }, 1000);
 
     
   }
@@ -57,7 +57,7 @@ export class ShortUrlComponent implements OnInit {
       this.nombreUrl = '';
       console.log(error);
       if(error.error.description === 'The value provided is invalid.')  {
-        this.error('La URL ingresada es invalida')
+        this.error('La URL ingresada es inválida')
       }
     })
   }
