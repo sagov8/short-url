@@ -1,3 +1,6 @@
+<div *ngIf="showError" class="alert alert-dismissible alert-danger">
+  <strong>{{ textError | uppercase }}</strong>
+</div>
 <div class="container mt-5 text-center">
   <h1>Acorta links de una manera sencilla</h1>
   <figure class="text-center">
@@ -29,15 +32,26 @@
       </div>
       <div class="col-lg-4">
         <div class="d-grid gap-1">
-            <button class="btn btn-dark btn-primary" (click)="procesarUrl()" type="button">Acortar</button>
-          </div>
+          <button
+            class="btn btn-dark btn-primary"
+            (click)="procesarUrl()"
+            type="button"
+          >
+            Acortar
+          </button>
+        </div>
       </div>
     </div>
     <div *ngIf="urlProcesada" class="row">
-        <div class="col-lg-8 mt-4">
-            <label for="urlShort">Url Acortada:</label>
-            <input type="text" [(ngModel)]="urlShort" class="form-control form-control-lg" placeholder="Url Procesada...">
-        </div>
+      <div class="col-lg-8 mt-4">
+        <label for="urlShort">Url Acortada:</label>
+        <input
+          type="text"
+          [(ngModel)]="urlShort"
+          class="form-control form-control-lg"
+          placeholder="Url Procesada..."
+        />
+      </div>
     </div>
   </div>
   <app-spinner *ngIf="loading"></app-spinner>
