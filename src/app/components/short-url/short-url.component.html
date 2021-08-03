@@ -1,1 +1,42 @@
-<p>short-url works!</p>
+<div class="container mt-5 text-center">
+  <h1>Acorta links de una manera sencilla</h1>
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <p class="mb-0">
+        No malgastes tu tiempo, pues de esa materia está formada tu vida.
+      </p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Benjamin <cite title="Source Title">Franklin</cite>
+    </figcaption>
+  </figure>
+  <div class="container">
+    <h1 class="display-4 mt-5">Ingrese el link para acortar</h1>
+    <div class="row mt-4">
+      <div class="col-lg-8">
+        <div class="form-group">
+          <div class="form-floating mb-3">
+            <input
+              type="url"
+              [(ngModel)]="nombreUrl"
+              class="form-control form-control-default"
+              id="floatingInput"
+              placeholder="https/www.somesite.com/dasdfker124&&5"
+            />
+            <label for="floatingInput">URL</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="d-grid gap-1">
+            <button class="btn btn-dark btn-primary" (click)="procesarUrl()" type="button">Acortar</button>
+          </div>
+      </div>
+    </div>
+    <div *ngIf="urlProcesada" class="row">
+        <div class="col-lg-8 mt-4">
+            <input type="text" [(ngModel)]="urlShort" class="form-control form-control-lg" placeholder="Url Procesada...">
+        </div>
+    </div>
+  </div>
+</div>
